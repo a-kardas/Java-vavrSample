@@ -6,6 +6,9 @@ This dummpy app shows how you can use vavr.io in your project. You can find more
 * maven 3.3.9
 * java 8 
 
+## build
+mvn compile
+
 ## run
 mvn exec:java -Dexec.mainClass="org.vavr.sample.Main" or mvn -Dtest=CustomerServiceTest test 
 
