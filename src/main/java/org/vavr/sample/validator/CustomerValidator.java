@@ -1,8 +1,8 @@
 package org.vavr.sample.validator;
 
-import com.sun.xml.internal.ws.util.StringUtils;
 import io.vavr.collection.Seq;
 import io.vavr.control.Validation;
+import org.apache.commons.lang3.text.WordUtils;
 import org.vavr.sample.domain.Customer;
 
 /**
@@ -25,7 +25,7 @@ public class CustomerValidator {
 
     private Validation<String, String> isEmpty(String value, String field){
         if(value == null || value.equals(""))
-            return Validation.invalid(String.format(NOT_EMPTY_ERROR, StringUtils.capitalize(field)));
+            return Validation.invalid(String.format(NOT_EMPTY_ERROR, WordUtils.capitalize(field)));
         else
             return Validation.valid(value);
     }
